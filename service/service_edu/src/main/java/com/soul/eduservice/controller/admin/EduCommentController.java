@@ -29,7 +29,6 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/eduservice/comment")
-@CrossOrigin
 public class EduCommentController {
     @Autowired
     private UcenterClient ucenterClient;
