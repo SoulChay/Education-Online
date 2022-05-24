@@ -1,6 +1,5 @@
 package com.soul.eduservice.controller.admin;
 
-
 import com.soul.commonutils.response.R;
 import com.soul.eduservice.client.VodClient;
 import com.soul.eduservice.entity.EduVideo;

@@ -24,34 +24,36 @@ import java.util.List;
 @Service
 public class EduVideoServiceImpl extends ServiceImpl<EduVideoMapper, EduVideo> implements EduVideoService {
 
-
+    //注入vodClient
     @Autowired
     private VodClient vodClient;
 
     //根据课程id删除小节
-    //根据课程id删除视频
     @Override
     public void removeVideoByCourseId(String courseId) {
+        //1 根据课程id查询课程所有的视频id
+        QueryWrapper<EduVideo> wrapperVideo = new QueryWrapper<>();
+        wrapperVideo.eq("course_id",courseId);
+        wrapperVideo.select("video_source_id");
+        List<EduVideo> eduVideoList = baseMapper.selectList(wrapperVideo);
 
-        //根据课程id查询所有视频
-        QueryWrapper<EduVideo> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("course_id",courseId);
-        queryWrapper.select("video_source_id");
-        List<EduVideo> eduVideoList = baseMapper.selectList(queryWrapper);
-
+        // List<EduVideo>变成List<String>
         List<String> videoIds = new ArrayList<>();
-        for (EduVideo video : eduVideoList) {
-            String videoSourceId = video.getVideoSourceId();
-            if (!StringUtils.isEmpty(videoSourceId)){
-                videoIds.add(videoSourceId); //放到集合中
+        for (int i = 0; i < eduVideoList.size(); i++) {
+            EduVideo eduVideo = eduVideoList.get(i);
+            String videoSourceId = eduVideo.getVideoSourceId();
+            if(!StringUtils.isEmpty(videoSourceId)) {
+                //放到videoIds集合里面
+                videoIds.add(videoSourceId);
             }
         }
 
-        if (videoIds.size() > 0){
-            vodClient.deleteBatch(videoIds);//删除视频
+        //根据多个视频id删除多个视频
+        if(videoIds.size()>0) {
+            vodClient.deleteBatch(videoIds);
         }
-        //删除课程
-        QueryWrapper<EduVideo> wrapper= new QueryWrapper<>();
+
+        QueryWrapper<EduVideo> wrapper = new QueryWrapper<>();
         wrapper.eq("course_id",courseId);
         baseMapper.delete(wrapper);
     }

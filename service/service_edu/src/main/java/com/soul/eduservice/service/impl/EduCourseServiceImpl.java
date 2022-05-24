@@ -115,7 +115,7 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
 
     //删除课程
     @Override
-    public void removeCourse(String courseId) {
+    public boolean removeCourse(String courseId) {
         //根据课程id删除小节
         videoService.removeVideoByCourseId(courseId);
         //根据课程id删除章节
@@ -125,9 +125,9 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
         //根据课程id删除课程本身
         int res = baseMapper.deleteById(courseId);
         if (res == 0){
-            throw new GuliException("删除失败",20001);
+            return false;
         }
-
+        return true;
     }
 
     //条件查询课程带分页功能

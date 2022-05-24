@@ -19,7 +19,7 @@ public class EduLoginController {
         return R.ok()
                 .data("roles","[admin]")
                 .data("name","admin")
-                .data("avatar","https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif");
+                .data("avatar","https://avatars0.githubusercontent.com/u/17878390?s=400&v=4");
     }
 
 }

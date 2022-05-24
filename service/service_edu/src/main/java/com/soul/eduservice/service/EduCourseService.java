@@ -33,7 +33,7 @@ public interface EduCourseService extends IService<EduCourse> {
     CoursePublishVo publishCourseInfo(String id);
 
     //删除课程
-    void removeCourse(String courseId);
+    boolean removeCourse(String courseId);
 
     //条件查询课程带分页功能
     Map<String, Object> getCourseFrontList(Page<EduCourse> pageCourse, CourseFrontVo courseFrontVo);
