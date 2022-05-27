@@ -36,53 +36,53 @@
 
 ### 2.1 主页展示
 
-<img url="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/1.png"></img>
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/1.png"></img>
 
 
 
-<img url="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/2.png"></img>
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/2.png"></img>
 
 
 
-<img url="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/3.png"></img>
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/3.png"></img>
 
 ### 2.2 课程页面
 
-<img url="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/4.png"></img>
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/4.png"></img>
 
 ### 2.3 名师页面
 
-<img url="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/5.png"></img>
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/5.png"></img>
 
 ### 2.4 注册页面
 
-<img url="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/6.png"></img>
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/6.png"></img>
 
 ### 2.5 登录页面
 
-<img url="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/7.png"></img>
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/7.png"></img>
 
 ### 2.6 课程具体页面
 
-<img url="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/8.png"></img>
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/8.png"></img>
 
 ### 2.7 评论功能
 
-<img url="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/9.png"></img>
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/9.png"></img>
 
 ### 2.8 购买界面
 
-<img url="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/10.png"></img>
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/10.png"></img>
 
 
 
-<img url="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/11.png"></img>
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/11.png"></img>
 
 ### 2.9 付款后页面
 
 会发现付完款后原本的 `立即购买` 变成了 `立即播放`
 
-<img url="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/12.png"></img>
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/12.png"></img>
 
 ### 2.10 视频播放
 
@@ -90,8 +90,7 @@
 
 放了我最喜欢的凯老师教学前先试一下王路飞的水平的视频（😎）
 
-<img url="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/13.png"></img>
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/13.png"></img>
 
 
-
-<img url="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/14.png"></img>
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/14.png"></img>
