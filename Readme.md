@@ -2,7 +2,7 @@
 
 本项目属于在线教育项目，包括包括前台系统以及后台管理系统，采用B2B模式，基于 SpringCloud、MyBatisPlus、Redis、SpringBoot实现。前台系统包括：用户登录注册、名师列表、名师详情、课程列表、课程详情、视频在线播放等模块。后台管理系统包括：首页、讲师分类、课程分类、课程管理、统计分析等模块。
 
-后端的主要技术架构是：SpringBoot + SpringCloud + MyBatisPlus + HttpClient + MySQL + Maven + Nacos + Nginx + Redis + EasyExcel + 阿里云OSS + 阿里云视频点播。
+后端的主要技术架构是：SpringBoot + SpringCloud + MyBatisPlus + MySQL + HttpClient + Maven + Nacos + Nginx + Redis + EasyExcel + 阿里云OSS + 阿里云视频点播。
 
 前端的主要技术架构是：NodeJS + Vue + Element UI + NUXT + ECharts。
 
