@@ -34,7 +34,7 @@
 └─ vue-front-1010  -- 前台UI
 ````
 
-## 2. 项目展示
+## 2. 前台页面展示
 
 ### 2.1 主页展示
 
@@ -94,5 +94,44 @@
 
 <img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/13.png"></img>
 
-
 <img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/14.png"></img>
+
+## 3.后台页面展示
+
+### 3.1 登录页面
+
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/15.png"></img>
+
+### 3.2 讲师管理页面
+
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/16.png"></img>
+
+### 3.3 添加讲师页面
+
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/17.png"></img>
+
+### 3.4 课程分类页面
+
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/18.png"></img>
+
+### 3.5 课程分类添加页面
+
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/19.png"></img>
+
+### 3.6 课程管理页面
+
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/20.png"></img>
+
+### 3.7 添加课程页面
+
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/21.png"></img>
+
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/22.png"></img>
+
+### 3.8 统计生成数据页面
+
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/23.png"></img>
+
+### 3.9 图表显示页面
+
+<img src="http://fastly.jsdelivr.net/gh/SoulChay/figureBed/depository/EducationOnline/24.png"></img>
