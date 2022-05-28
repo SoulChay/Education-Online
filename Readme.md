@@ -6,6 +6,8 @@
 
 前端的主要技术架构是：NodeJS + Vue + Element UI + NUXT + ECharts。
 
+前端部分代码：<a href="https://github.com/SoulChay/Education-Onlien-Front">我的动漫英雄学院<a/>
+
 ### 1.1 后端部分
 
 ```
