@@ -14,7 +14,7 @@ import com.soul.eduservice.service.EduCourseDescriptionService;
 import com.soul.eduservice.service.EduCourseService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.soul.eduservice.service.EduVideoService;
-import com.soul.servicebase.exception.GuliException;
+import com.soul.servicebase.exception.SoulException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -55,7 +55,7 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
         int insert = baseMapper.insert(eduCourse);
         if(insert == 0) {
             //添加失败
-            throw new GuliException("添加课程信息失败",20001);
+            throw new SoulException("添加课程信息失败",20001);
         }
 
         //获取添加之后课程id
@@ -95,7 +95,7 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
         BeanUtils.copyProperties(courseInfoVo,eduCourse);
         int update = baseMapper.updateById(eduCourse);
         if(update == 0) {
-            throw new GuliException("修改课程信息失败",20001);
+            throw new SoulException("修改课程信息失败",20001);
         }
 
         //2 修改描述表
@@ -145,10 +145,6 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
             }
         }
         //进行排序
-        String buyCountSort = courseFrontVo.getBuyCountSort(); //关注度（销量排序）
-        if (!StringUtils.isEmpty(buyCountSort)){
-            queryWrapper.orderByDesc("buy_count");
-        }
         String gmtCreateSort = courseFrontVo.getGmtCreateSort();//最新时间排序
         if (!StringUtils.isEmpty(gmtCreateSort)){
             queryWrapper.orderByDesc("gmt_create");
@@ -156,6 +152,10 @@ public class EduCourseServiceImpl extends ServiceImpl<EduCourseMapper, EduCourse
         String priceSort = courseFrontVo.getPriceSort(); //课程价格排序
         if (!StringUtils.isEmpty(priceSort)){
             queryWrapper.orderByDesc("price");
+        }
+        String buyCountSort = courseFrontVo.getBuyCountSort(); //关注度（销量排序）
+        if (!StringUtils.isEmpty(buyCountSort)){
+            queryWrapper.orderByDesc("buy_count");
         }
 
         baseMapper.selectPage(pageCourse,queryWrapper);

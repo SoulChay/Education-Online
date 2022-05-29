@@ -9,7 +9,7 @@ import com.soul.eduservice.mapper.EduChapterMapper;
 import com.soul.eduservice.service.EduChapterService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.soul.eduservice.service.EduVideoService;
-import com.soul.servicebase.exception.GuliException;
+import com.soul.servicebase.exception.SoulException;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -90,7 +90,7 @@ public class EduChapterServiceImpl extends ServiceImpl<EduChapterMapper, EduChap
         int count = videoService.count(wrapper);
         //判断
         if(count >0) {//查询出小节，不进行删除
-            throw new GuliException("不能删除",20001);
+            throw new SoulException("不能删除",20001);
         } else { //不能查询数据，进行删除
             //删除章节
             int result = baseMapper.deleteById(chapterId);

@@ -6,10 +6,9 @@ import com.soul.educenter.entity.UcenterMember;
 import com.soul.educenter.service.UcenterMemberService;
 import com.soul.educenter.utils.ConstantWxUtils;
 import com.soul.educenter.utils.HttpClientUtils;
-import com.soul.servicebase.exception.GuliException;
+import com.soul.servicebase.exception.SoulException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -122,7 +121,7 @@ public class WxApiController {
 
             return "redirect:http://localhost:3000?token="+jwtToken;
         } catch (Exception e) {
-            throw new GuliException("登录失败",20001);
+            throw new SoulException("登录失败",20001);
         }
     }
 }

@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class GuliException extends RuntimeException {
+public class SoulException extends RuntimeException {
 
     private String msg;//状态信息
 

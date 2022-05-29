@@ -10,10 +10,6 @@ import org.springframework.util.StringUtils;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
-/**
- * @author helen
- * @since 2019/10/16
- */
 public class JwtUtils {
 
     public static final long EXPIRE = 1000 * 60 * 60 * 24;  //token过期时间
@@ -24,7 +20,7 @@ public class JwtUtils {
         String JwtToken = Jwts.builder()
                 .setHeaderParam("typ", "JWT")
                 .setHeaderParam("alg", "HS256")
-                .setSubject("guli-user")
+                .setSubject("user")
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRE))
                 .claim("id", id)

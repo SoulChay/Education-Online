@@ -3,7 +3,6 @@ package com.soul.staservice.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.soul.commonutils.comment.UcenterMember;
 import com.soul.commonutils.response.R;
-import com.soul.commonutils.utils.RandomUtil;
 import com.soul.staservice.client.UcenterClient;
 import com.soul.staservice.entity.StatisticsDaily;
 import com.soul.staservice.mapper.StatisticsDailyMapper;

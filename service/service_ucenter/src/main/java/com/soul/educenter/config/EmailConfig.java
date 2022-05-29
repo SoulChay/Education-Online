@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 
 
 /**
- * @author HAN
  * @version 1.0
  * @create 04-16-16:01
  */
@@ -13,9 +12,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class EmailConfig {
 
-    /**
-     * 发件邮箱
-     */
     @Value("${spring.mail.username}")
     private String emailFrom;
 

@@ -18,6 +18,7 @@
             <artifactId>easyexcel</artifactId>
             <version>2.1.1</version>
         </dependency>
+        <!--动态代理（jdk自带只能代理接口，有局限性）-->
         <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib</artifactId>

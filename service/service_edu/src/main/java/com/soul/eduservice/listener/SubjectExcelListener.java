@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.soul.eduservice.entity.EduSubject;
 import com.soul.eduservice.entity.excel.SubjectData;
 import com.soul.eduservice.service.EduSubjectService;
-import com.soul.servicebase.exception.GuliException;
+import com.soul.servicebase.exception.SoulException;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
@@ -24,7 +24,7 @@ public class SubjectExcelListener extends AnalysisEventListener<SubjectData> {
     @Override
     public void invoke(SubjectData subjectData, AnalysisContext analysisContext) {
         if (subjectData == null){
-            throw new GuliException("文件数据为空",20001);
+            throw new SoulException("文件数据为空",20001);
         }
         //添加一级分类
         EduSubject existOneSubject = this.existOneSubject(subjectService, subjectData.getOneSubjectName());

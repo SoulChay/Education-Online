@@ -9,7 +9,7 @@ import com.soul.eduorder.mapper.PayLogMapper;
 import com.soul.eduorder.service.OrderService;
 import com.soul.eduorder.service.PayLogService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.soul.servicebase.exception.GuliException;
+import com.soul.servicebase.exception.SoulException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.soul.eduorder.utils.HttpClient;
@@ -78,7 +78,7 @@ public class PayLogServiceImpl extends ServiceImpl<PayLogMapper, PayLog> impleme
 
             return map;
         }catch(Exception e) {
-            throw new GuliException("生成二维码失败",20001);
+            throw new SoulException("生成二维码失败",20001);
         }
 
     }

@@ -12,7 +12,8 @@ import org.springframework.context.annotation.Configuration;
 public class EduConfig {
 
     /**
-     * 逻辑删除插件
+     * 逻辑删除
+     * mybatis plus高版本不需要配置注入逻辑删除 ，不需要编写上述代码
      */
     @Bean
     public ISqlInjector sqlInjector() {

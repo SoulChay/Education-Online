@@ -6,7 +6,7 @@ import com.aliyuncs.vod.model.v20170321.DeleteVideoRequest;
 import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthRequest;
 import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthResponse;
 import com.soul.commonutils.response.R;
-import com.soul.servicebase.exception.GuliException;
+import com.soul.servicebase.exception.SoulException;
 import com.soul.vod.service.VodService;
 import com.soul.vod.utils.ConstantVodUtils;
 import com.soul.vod.utils.InitVodClient;
@@ -22,7 +22,6 @@ public class VodController {
 
     @Autowired
     private VodService vodService;
-
 
     //上传到阿里云
     @PostMapping("/uploadAlyVideo")
@@ -46,7 +45,7 @@ public class VodController {
             return R.ok();
         } catch (Exception e) {
             e.printStackTrace();
-            throw new GuliException("删除视频失败", 20001);
+            throw new SoulException("删除视频失败", 20001);
         }
     }
 
@@ -73,7 +72,7 @@ public class VodController {
             String playAuth = response.getPlayAuth();
             return R.ok().data("playAuth",playAuth);
         }catch(Exception e) {
-            throw new GuliException("获取凭证失败",20001);
+            throw new SoulException("获取凭证失败",20001);
         }
     }
 

@@ -5,7 +5,7 @@ import com.aliyun.vod.upload.req.UploadStreamRequest;
 import com.aliyun.vod.upload.resp.UploadStreamResponse;
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.vod.model.v20170321.DeleteVideoRequest;
-import com.soul.servicebase.exception.GuliException;
+import com.soul.servicebase.exception.SoulException;
 import com.soul.vod.service.VodService;
 import com.soul.vod.utils.ConstantVodUtils;
 import com.soul.vod.utils.InitVodClient;
@@ -63,7 +63,7 @@ public class VodServiceImpl implements VodService {
             client.getAcsResponse(request);
         } catch (Exception e) {
             e.printStackTrace();
-            throw new GuliException("删除视频失败", 20001);
+            throw new SoulException("删除视频失败", 20001);
         }
     }
 }

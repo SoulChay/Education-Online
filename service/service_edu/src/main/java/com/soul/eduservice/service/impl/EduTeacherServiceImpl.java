@@ -35,7 +35,6 @@ public class EduTeacherServiceImpl extends ServiceImpl<EduTeacherMapper, EduTeac
         long pages = pageTeacher.getPages();
         long total = pageTeacher.getTotal();
         long size = pageTeacher.getSize();
-
         boolean hasPrevious = pageTeacher.hasPrevious();  //是否还有上一页
         boolean hasNext = pageTeacher.hasNext(); //是否还有下一页
 

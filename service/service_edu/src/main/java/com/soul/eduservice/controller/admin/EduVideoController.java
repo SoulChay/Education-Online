@@ -4,7 +4,7 @@ import com.soul.commonutils.response.R;
 import com.soul.eduservice.client.VodClient;
 import com.soul.eduservice.entity.EduVideo;
 import com.soul.eduservice.service.EduVideoService;
-import com.soul.servicebase.exception.GuliException;
+import com.soul.servicebase.exception.SoulException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
@@ -41,16 +41,12 @@ public class EduVideoController {
         if (!StringUtils.isEmpty(videoSourceId)){
             R result = vodClient.removeAlyVideo(videoSourceId);//删除视频
             if (result.getCode() == 20001){
-                throw new GuliException("视频删除失败，熔断器...",20001);
+                throw new SoulException("视频删除失败",20001);
             }
 
         }
-
         videoService.removeById(id);//删除小节
         return R.ok();
     }
-
-    //修改小节 TODO
-
 }
 

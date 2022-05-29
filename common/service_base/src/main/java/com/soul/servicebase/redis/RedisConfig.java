@@ -23,7 +23,6 @@ import java.time.Duration;
 @EnableCaching  //开启缓存
 public class RedisConfig extends CachingConfigurerSupport {
 
-
     @Bean
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
         RedisTemplate<String, Object> template = new RedisTemplate<>();

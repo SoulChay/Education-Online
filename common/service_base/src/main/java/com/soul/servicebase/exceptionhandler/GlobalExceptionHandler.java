@@ -2,7 +2,7 @@ package com.soul.servicebase.exceptionhandler;
 
 
 import com.soul.commonutils.response.R;
-import com.soul.servicebase.exception.GuliException;
+import com.soul.servicebase.exception.SoulException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -23,9 +23,9 @@ public class GlobalExceptionHandler {
     }
 
     //自定义异常
-    @ExceptionHandler(GuliException.class)
+    @ExceptionHandler(SoulException.class)
     @ResponseBody
-    public R error(GuliException e){
+    public R error(SoulException e){
         log.error(e.getMessage());
         e.printStackTrace();
         return R.error().code(e.getCode()).message(e.getMsg());

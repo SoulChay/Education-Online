@@ -10,7 +10,7 @@ import com.soul.educenter.entity.vo.RegisterVo;
 import com.soul.educenter.mapper.UcenterMemberMapper;
 import com.soul.educenter.service.UcenterMemberService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.soul.servicebase.exception.GuliException;
+import com.soul.servicebase.exception.SoulException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -38,7 +38,7 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
 
         //校验参数
         if (StringUtils.isEmpty(email) || StringUtils.isEmpty(password)) {
-            throw new GuliException("登录失败", 20001);
+            throw new SoulException("登录失败", 20001);
         }
 
         //获取用户
@@ -46,17 +46,17 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
                 new QueryWrapper<UcenterMember>().eq("email", email));
 
         if (null == member) {
-            throw new GuliException("用户不存在", 20001);
+            throw new SoulException("用户不存在", 20001);
         }
 
         //校验密码
         if (!MD5.encrypt(password).equals(member.getPassword())) {
-            throw new GuliException("密码错误", 20001);
+            throw new SoulException("密码错误", 20001);
         }
 
         //校验是否被禁用
         if (member.getIsDisabled()) {
-            throw new GuliException("用户已被禁用", 20001);
+            throw new SoulException("用户已被禁用", 20001);
         }
 
         //使用JWT生成token字符串
@@ -79,19 +79,19 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
         //校验参数
         if (StringUtils.isEmpty(email) || StringUtils.isEmpty(password)
                 || StringUtils.isEmpty(code) || StringUtils.isEmpty(nickname)) {
-            throw new GuliException("注册信息不全", 20001);
+            throw new SoulException("注册信息不全", 20001);
         }
         //校验校验验证码
         //从redis获取发送的验证码
         String mobleCode = redisTemplate.opsForValue().get(email);
         if (!code.equals(mobleCode)) {
-            throw new GuliException("验证码错误", 20001);
+            throw new SoulException("验证码错误", 20001);
         }
         //查询数据库中是否存在
         Integer count = baseMapper.selectCount(
                 new QueryWrapper<UcenterMember>().eq("email", email));
         if (count.intValue() > 0) {
-            throw new GuliException("该邮箱已注册", 20001);
+            throw new SoulException("该邮箱已注册", 20001);
         }
         //添加注册信息到数据库
         UcenterMember member = new UcenterMember();
